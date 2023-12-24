@@ -25,5 +25,5 @@ export const catSlice = createSlice({
 export const { getCatsFetch, getCatsSuccess , getCatsFailure }  = catSlice.actions; // OJO CON EXPORTAR NOMBRES REPETIDOS
 // export const {getCatsSuccess, getCatsSuccess, getCatsFailure} = catState.actions; // Cometio un error aca y lo corrigio luego
 
-export default catSlice.reducer;
+export default catSlice.reducer; // ojo es reducer y NO reducers
 // <2

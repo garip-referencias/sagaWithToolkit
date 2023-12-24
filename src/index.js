@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-// <1
+// <0 npm i  @reduxjs/toolkit react-redux redux-saga
+// <1  Copiar y pegar todo incluido <3/> y <5/> resolver luego 
 import { Provider } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
 import { configureStore } from '@reduxjs/toolkit';
 
-
-import catsReducer from './catState'      // <3/>
+import catsReducer from './catState'      // <3/> aca lo importa en plural en el archivo en singular
 import catSaga from './catSaga';          // <5/>
+
+
 const saga = createSagaMiddleware()
 const store = configureStore({
   reducer: {

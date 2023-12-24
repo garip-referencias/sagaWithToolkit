@@ -1,5 +1,6 @@
 // <4
-import { call, put, takeEvery } from 'redux-saga/effects'  // OJO AL IMPORTAR ESTE NOMBRE ES DISTINTO A LA SUGERENCIA
+import { call, put, takeEvery } from 'redux-saga/effects'  // OJO AL IMPORTAR ESTE NOMBRE
+//                                                            ES DISTINTO A LA SUGERENCIA
 import { getCatsSuccess } from './catState'   // <4.2/>
 
 
@@ -9,6 +10,9 @@ function* workGetCatsFetch(){
     const cats = yield call(() => fetch('https://api.thecatapi.com/v1/breeds'));
     const formattedCats = yield cats.json();
     const formattedCatsShortened = formattedCats.slice(0,10);
+
+    // Sí, put en Redux Saga es similar a dispatch en Redux. 
+// Ambos se utilizan para despachar acciones y actualizar el estado de la aplicación.
     yield put(getCatsSuccess(formattedCatsShortened));
 }
 // 4.1>
